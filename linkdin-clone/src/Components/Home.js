@@ -13,7 +13,7 @@ const Home = (props) =>{
 
   <Layout>
      <div>
-        left side
+        left side right
      </div>
 
      <div>
