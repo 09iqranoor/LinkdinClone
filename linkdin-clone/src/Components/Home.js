@@ -1,4 +1,7 @@
 import styled from "styled-components";
+import LeftSide from "./LeftSide";
+import Main from "./Main";
+import RightSide from "./RightSide";
 
 const Home = (props) =>{
     return(
@@ -12,17 +15,10 @@ const Home = (props) =>{
     </Section>
 
   <Layout>
-     <div>
-        left side right
-     </div>
 
-     <div>
-        Main
-     </div>
-
-     <div>
-        Right Side
-     </div>
+    <LeftSide/>
+      <Main/>
+      <RightSide/>
   </Layout>
 
 
@@ -79,5 +75,18 @@ p{
 
  
 const Layout = styled.div`
+display: grid;
+ grid-template-areas: "left  Main Right " ;
+ grid-template-columns: minmax(0,5fr) minmax(0,12fr) minmax(300px, 7fr);
+ column-gap: 25px;
+ row-gap: 25px;
+ margin: 25px 0; 
+ @media(max-width:  768px)
+{
+    display: flex;
+    flex-direction: column;
+    padding: 0 5px;
+
+}
 `;
 export default Home;
